@@ -22,7 +22,7 @@ var res,pro;
 					$item = document.createElement('div');
 					$item.style.margin = '10px';
 					$item.style.cssFloat="left"; 
-					$item.style.width="50px";
+					$item.style.width="60px";
 					
 					
                     $field = document.createElement('label');

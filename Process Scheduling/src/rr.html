@@ -18,41 +18,42 @@
               </button>
         </nav>
 	<br>
-	<div class="container">
-		<div class="jobotron">
-			<h1 class="display-3">RR Scheduling</h1>
-            <br>
-			<div id="showinput"></div>
-			<hr>
-			<div class="row">
-				<div class="form-group" style="margin-left:50px; float:left;  width: 20%">
-                    <label class="col-form-label" for="inputDefault">Arrival time: </label>
-                    <input class="form-control" id="newat" name="at" placeholder="Arrival Time" type="text" size="35">
-                </div>
-				<div class="form-group" style="margin-left:50px; float:left;  width: 20%">
-					<label class="col-form-label" for="inputDefault">Burst time:</label>
-					<input class="form-control" id="newbt" name="bt" placeholder="Burst Time" type="text" size="35">
+	<section style="height: 700px;">
+		<div class="container">
+			<div class="jumbotron">
+				<h1 class="display-3">RR Scheduling</h1>
+				<br>
+				<div id="showinput"></div>
+				<hr>
+				<div class="row">
+					<div class="form-group" style="margin-left:50px; float:left;  width: 20%">
+						<label class="col-form-label" for="inputDefault">Arrival time: </label>
+						<input class="form-control" id="newat" name="at" placeholder="Arrival Time" type="text" size="35">
+					</div>
+					<div class="form-group" style="margin-left:50px; float:left;  width: 20%">
+						<label class="col-form-label" for="inputDefault">Burst time:</label>
+						<input class="form-control" id="newbt" name="bt" placeholder="Burst Time" type="text" size="35">
+					</div>
+				</div>
+				<button type="submit" id="add" class="btn btn-primary" style="margin-left: 36px" onclick="addToList()">Add</button>
+				<br>
+				<div class="form-group" style="margin-left: 36px; float:left; width: 20%;">
+					<label class="col-form-label" for="inputDefault">Time Quantum: </label>
+					<input class="form-control" id = "tq" name="tq" placeholder="quantum" type="text" size="35">
+				</div>
+				<div style="margin-top: 50px;">
+					<button type="submit" class="btn btn-primary" style="margin-left: 36px; float: right;" onclick="clearData()">Clear Data</button>
+					
+					<a href="#result"> <button type="submit" class="btn btn-primary" style="margin-left: 36px; float: right;" onclick="showOutput(3)">Schedule It!</button>  </a>
 				</div>
 			</div>
-            <button type="submit" id="add" class="btn btn-primary" style="margin-left: 36px" onclick="addToList()">Add</button>
-			<br>
-			<div class="form-group" style="margin-left: 36px; float:left; width: 20%;">
-				<label class="col-form-label" for="inputDefault">Time Quantum: </label>
-				<input class="form-control" id = "tq" name="tq" placeholder="quantum" type="text" size="35">
-			</div>
-			<!--
-    <div style="width:800px;margin-left:20px;">
-        Time Quantum:
-        <input style="width:50px;margin-left:30px;" id="tq" type="text" value=""></input>
-    </div>
-    -->
-			<div style="margin-top: 50px;">
-				<button type="submit" class="btn btn-primary" style="margin-left: 36px; float: right;" onclick="clearData()">Clear Data</button>
-				<button type="submit" class="btn btn-primary" style="margin-left: 36px; float: right;" onclick="showOutput(3)">Schedule It!</button>
-			</div>
 		</div>
-		<!-- Gantt Chart -->
-		<div style="margin-top: 150px;">
+	</section>
+
+		<section id="result">
+			<!-- Gantt Chart -->
+			<div class="container"> 
+		<div style="margin-top: 150px;" class="jumbotron">
 			<h2 id ="chart-header" style="text-align:center;"></h2>
 			<br />
 			<div id="gantt"></div>
@@ -65,12 +66,12 @@
         </div>
 		<br>
 		<!-- CPU Operations -->
-		<div style="margin-top: 100px;">
+		<div style="margin-top: 100px;" class="jumbotron">
 			<h3 id="operations-heading" style="text-align:center;"></h3>
 			<div id="operations"></div>
 		</div>
 		<!-- Table -->
-		<div style="margin-top: 50px;">
+		<div style="margin-top: 50px;" class="jumbotron">
 			<h2 id="table-heading" style="text-align:center;"></h2>
 			<div>
 				<table id="tab" class="table table-striped centered responsive-table" style="border-color: black; border-width: 2px; align: center; bgcolor: white; cellspacing: 10px;">
@@ -79,5 +80,9 @@
 				</table>
 			</div>
 		</div>
+		</div>
+
+		</section>
+		
 </body>
 </html>

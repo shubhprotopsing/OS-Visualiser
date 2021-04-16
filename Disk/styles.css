@@ -22,3 +22,9 @@
     font-size: 20px;
     text-align: left;
 }
+.column1 {
+    float: left;
+    width: 100%;
+    padding: 15px;
+    margin: 10px;
+}
